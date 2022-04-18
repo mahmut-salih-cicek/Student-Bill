@@ -1,4 +1,4 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.View
 
 import android.content.Context
 import android.content.Intent
@@ -9,11 +9,11 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import kotlinx.android.synthetic.main.activity_billing_list.*
+import com.xmod.firebase_1.*
+import com.xmod.firebase_1.Model.firebasemodel
 import kotlinx.android.synthetic.main.activity_user.*
 
 class UserActivity : AppCompatActivity() {
@@ -66,7 +66,7 @@ class UserActivity : AppCompatActivity() {
 
         if (item.itemId == R.id.exit){
             auth.signOut()
-            var intent = Intent(this,MainActivity::class.java)
+            var intent = Intent(this, MainActivity::class.java)
             UserActivityName.setText("")
             localUserName.edit().putString("data","").apply()
 
@@ -122,7 +122,7 @@ class UserActivity : AppCompatActivity() {
        var str = localUserName.getString("data","").toString()
         if (str != ""){
             localUser = str
-            val intent = Intent(this,ShareActivity::class.java)
+            val intent = Intent(this, ShareActivity::class.java)
             startActivity(intent)
             finish()
         }else{
@@ -140,7 +140,7 @@ class UserActivity : AppCompatActivity() {
 
         if (str != ""){
             localUser = str
-            var intent = Intent(this,BillingListActivity::class.java)
+            var intent = Intent(this, BillingListActivity::class.java)
             startActivity(intent)
         }else{
             var alertDialog = AlertDialog.Builder(this)
@@ -154,7 +154,7 @@ class UserActivity : AppCompatActivity() {
 
 
     fun Borc(view: android.view.View) {
-        val intent = Intent(this,BorcActivity::class.java)
+        val intent = Intent(this, BorcActivity::class.java)
         startActivity(intent)
     }
 

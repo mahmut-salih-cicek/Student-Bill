@@ -1,16 +1,17 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.View
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
+import com.xmod.firebase_1.Model.firebasemodel
+import com.xmod.firebase_1.R
+import com.xmod.firebase_1.Recycler.BillingRecycler
 import kotlinx.android.synthetic.main.activity_billing_list.*
 
-class BillingListActivity : AppCompatActivity() ,BillingRecycler.Listener{
+class BillingListActivity : AppCompatActivity() , BillingRecycler.Listener{
 
 
     lateinit var auth: FirebaseAuth
@@ -83,7 +84,7 @@ class BillingListActivity : AppCompatActivity() ,BillingRecycler.Listener{
         postListPblic.clear()
         uuName = firebasemodel.kullanıcıIsım
         postListPblic.add(firebasemodel)
-        val intent = Intent(this,UserDetailActivity::class.java)
+        val intent = Intent(this, UserDetailActivity::class.java)
         startActivity(intent)
     }
 

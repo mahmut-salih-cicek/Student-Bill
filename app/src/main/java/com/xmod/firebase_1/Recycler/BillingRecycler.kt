@@ -1,12 +1,14 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.Recycler
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.xmod.firebase_1.Model.firebasemodel
+import com.xmod.firebase_1.R
 import kotlinx.android.synthetic.main.item_row.view.*
 
-class BillingRecycler(var arrayList :ArrayList<firebasemodel> , var listener:Listener):RecyclerView.Adapter<BillingRecycler.Holder>() {
+class BillingRecycler(var arrayList :ArrayList<firebasemodel>, var listener: Listener):RecyclerView.Adapter<BillingRecycler.Holder>() {
 
 
     interface Listener{

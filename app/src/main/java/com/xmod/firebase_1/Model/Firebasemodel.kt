@@ -1,4 +1,4 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.Model
 
 data class firebasemodel(
     var kullanıcıResimURL :String,

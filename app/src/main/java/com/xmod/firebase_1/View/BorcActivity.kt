@@ -1,10 +1,12 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.xmod.firebase_1.Model.firebasemodel
+import com.xmod.firebase_1.R
 
 class BorcActivity : AppCompatActivity() {
 

@@ -1,9 +1,12 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.Recycler
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.xmod.firebase_1.GorselYap
+import com.xmod.firebase_1.R
+import com.xmod.firebase_1.Model.firebasemodel
 import kotlinx.android.synthetic.main.detail_row.view.*
 
 class DetailRecycler(var arrayList : ArrayList<firebasemodel>) : RecyclerView.Adapter<DetailRecycler.Holder>() {

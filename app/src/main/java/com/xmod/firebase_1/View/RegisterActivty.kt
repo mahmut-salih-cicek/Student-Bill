@@ -1,4 +1,4 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.View
 
 import android.app.AlertDialog
 import android.content.DialogInterface
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
+import com.xmod.firebase_1.R
 import kotlinx.android.synthetic.main.activity_register_activty.*
 
 class RegisterActivty : AppCompatActivity() {
@@ -34,7 +34,7 @@ class RegisterActivty : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email!!,password!!).addOnCompleteListener { task ->
                 if (task.isSuccessful){
                     Toast.makeText(this, "başarılı", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this,MainActivity::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }
             }
@@ -52,7 +52,7 @@ class RegisterActivty : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
         super.onBackPressed()

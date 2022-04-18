@@ -1,9 +1,8 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.View
 
 import android.Manifest
 import android.app.Activity
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -20,6 +19,7 @@ import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
+import com.xmod.firebase_1.R
 import kotlinx.android.synthetic.main.activity_share.*
 import java.util.*
 
@@ -83,7 +83,7 @@ class ShareActivity : AppCompatActivity() {
                     /// api oluşturuyoruz
                     database.collection("Post").add(postHashMap).addOnCompleteListener {
                         if (it.isSuccessful){
-                            var intent = Intent(this@ShareActivity,UserActivity::class.java)
+                            var intent = Intent(this@ShareActivity, UserActivity::class.java)
                             startActivity(intent)
                             finish()
                         }
@@ -167,7 +167,7 @@ class ShareActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this,UserActivity::class.java)
+        val intent = Intent(this, UserActivity::class.java)
         startActivity(intent)
         finish()
         super.onBackPressed()

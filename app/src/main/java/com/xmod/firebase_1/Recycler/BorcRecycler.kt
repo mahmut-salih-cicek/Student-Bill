@@ -1,9 +1,11 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.Recycler
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.xmod.firebase_1.Model.firebasemodel
+import com.xmod.firebase_1.R
 import kotlinx.android.synthetic.main.borc_row.view.*
 
 class BorcRecycler(var kullaniciIsım: ArrayList<firebasemodel>): RecyclerView.Adapter<BorcRecycler.Holder>() {

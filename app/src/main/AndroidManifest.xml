@@ -12,25 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebase_1">
         <activity
-            android:name=".BorcActivity"
+            android:name=".View.BorcActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivty"
+            android:name=".View.RegisterActivty"
             android:exported="false" />
         <activity
-            android:name=".UserDetailActivity"
+            android:name=".View.UserDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".BillingListActivity"
+            android:name=".View.BillingListActivity"
             android:exported="false" />
         <activity
-            android:name=".ShareActivity"
+            android:name=".View.ShareActivity"
             android:exported="false" />
         <activity
-            android:name=".UserActivity"
+            android:name=".View.UserActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

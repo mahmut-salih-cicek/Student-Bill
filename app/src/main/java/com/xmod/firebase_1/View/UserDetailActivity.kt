@@ -1,12 +1,13 @@
-package com.xmod.firebase_1
+package com.xmod.firebase_1.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.xmod.firebase_1.BillingListActivity.Companion.postListPblic
-import kotlinx.android.synthetic.main.activity_billing_list.*
+import com.xmod.firebase_1.R
+import com.xmod.firebase_1.Recycler.DetailRecycler
+import com.xmod.firebase_1.Model.firebasemodel
 import kotlinx.android.synthetic.main.activity_user_detail.*
 
 class UserDetailActivity : AppCompatActivity() {
@@ -43,7 +44,7 @@ class UserDetailActivity : AppCompatActivity() {
 
         database.collection("Post")
             /// kullanıcıya ozel datayi goster
-            .whereEqualTo("kullanıcıIsım",BillingListActivity.uuName)
+            .whereEqualTo("kullanıcıIsım", BillingListActivity.uuName)
             // .whereEqualTo("kullanıcıIsım","${UserActivity.localUser}")
             /// en son girelen tarih en basta gozukkecek
             //   .orderBy("tarih", Query.Direction.DESCENDING)
